@@ -1,11 +1,10 @@
-INSERT INTO `towns` (`id`, `name`)
-VALUES
-(1,'Sofia'),
-(2, 'Plovdiv'),
-(3, 'Varna');
-
-INSERT INTO `minions`(`id`,`name`,`age`,`town_id`)
-VALUES
-(1,'Kevin', 22, 1),
-(2,'Bob', 15, 3),
-(3, 'Steward',NULL,2);
+CREATE TABLE `people`(
+    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    `name` VARCHAR(200) NOT NULL, 
+    `picture` VARBINARY(2000) NULL,  
+    `height` DECIMAL(2) NULL,  
+    `weight` DECIMAL(2) NULL, 
+    `gender` VARCHAR(1) CHECK (`gender` IN ('f','m')) NOT NULL,  
+    `birthdate` DATE NOT NULL,  
+    `biography` LONGTEXT NULL
+);
