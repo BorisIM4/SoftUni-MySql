@@ -8,3 +8,21 @@ CREATE TABLE `people`(
     `birthdate` DATE NOT NULL,  
     `biography` LONGTEXT NULL
 );
+
+create table people
+(
+	id int not null auto_increment,
+    name varchar(200) not null, 
+    picture blob,
+    height double,
+    weight double,
+	gender enum('m', 'f') not null, 
+    birthdate datetime not null,
+    biography text,
+    PRIMARY KEY (id)
+);
+insert into people(name, picture, height, weight, gender, birthdate, biography)VALUES ('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
+('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
+('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
+('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
+('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' );
