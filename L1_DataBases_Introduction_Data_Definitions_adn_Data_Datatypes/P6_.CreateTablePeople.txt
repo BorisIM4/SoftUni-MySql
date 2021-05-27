@@ -1,28 +1,16 @@
 CREATE TABLE `people`(
-    `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    `name` VARCHAR(200) NOT NULL, 
-    `picture` VARBINARY(2000) NULL,  
-    `height` DECIMAL(2) NULL,  
-    `weight` DECIMAL(2) NULL, 
-    `gender` VARCHAR(1) CHECK (`gender` IN ('f','m')) NOT NULL,  
-    `birthdate` DATE NOT NULL,  
-    `biography` LONGTEXT NULL
+`id` INT PRIMARY KEY AUTO_INCREMENT,
+`name` VARCHAR(200) NOT NULL,
+`picture` BLOB,
+`height` FLOAT(5,2) ,
+`weight` FLOAT(5,2) ,
+`gender` ENUM('M','F') NOT NULL,
+`birthdate` DATE NOT NULL,
+`biography` TEXT
 );
 
-create table people
-(
-	id int not null auto_increment,
-    name varchar(200) not null, 
-    picture blob,
-    height double,
-    weight double,
-	gender enum('m', 'f') not null, 
-    birthdate datetime not null,
-    biography text,
-    PRIMARY KEY (id)
-);
-insert into people(name, picture, height, weight, gender, birthdate, biography)VALUES ('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
-('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
-('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
-('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' ),
-('Hristo Dinev', NULL, 188.62, 120.01, 'm', now(), 'sasas' );
+INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.33', '55', 'f', '1987-11-02');
+INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.55', '67', 'f', '1987-11-02');
+INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.44', '76', 'm', '1987-11-02');
+INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.55', '67', 'm', '1987-11-02');
+INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.45', '34', 'm', '1987-11-02');
