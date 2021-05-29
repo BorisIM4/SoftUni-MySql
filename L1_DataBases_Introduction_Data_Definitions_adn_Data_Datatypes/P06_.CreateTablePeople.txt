@@ -9,8 +9,8 @@ CREATE TABLE `people`(
 `biography` TEXT
 );
 
-INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.33', '55', 'f', '1987-11-02');
-INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.55', '67', 'f', '1987-11-02');
-INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.44', '76', 'm', '1987-11-02');
-INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.55', '67', 'm', '1987-11-02');
-INSERT INTO `minions`.`people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.45', '34', 'm', '1987-11-02');
+INSERT INTO `people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.33', '55', 'f', '1987-11-02');
+INSERT INTO `people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Aleks Milanova', '1.55', '67', 'f', '1987-11-02');
+INSERT INTO `people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.44', '76', 'm', '1987-11-02');
+INSERT INTO `people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.55', '67', 'm', '1987-11-02');
+INSERT INTO `people` (`name`, `height`, `weight`, `gender`, `birthdate`) VALUES ('Boris Milanov', '1.45', '34', 'm', '1987-11-02');
