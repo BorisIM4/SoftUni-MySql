@@ -26,3 +26,19 @@ VALUES
 (3, 'Gosho', 'Goshev');
 
 SELECT * FROM `employees`;
+
+USE `GAMEBAR`;
+
+ALtER TABLE `employees`
+ADD COLUMN `middle_name` VARCHAR(20);
+
+ALTER TABLE `products`
+ADD CONSTRAINT fk_products_categories
+FOREIGN KEY (`category_id`)
+REFERENCES `categories` (`id`);
+
+ALTER TABLE `gamebar`.`employees` 
+CHANGE COLUMN `MIDDLE_NAME` `middle_name` VARCHAR(100) NULL DEFAULT NULL ;
+
+ALTER TABLE `gamebar`.`employees` 
+CHANGE COLUMN `SECOND_name` `last_name` VARCHAR(50) NOT NULL ;
