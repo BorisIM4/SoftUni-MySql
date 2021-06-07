@@ -9,8 +9,11 @@ WHERE `salary` > '1000,00'
  ORDER BY `id`;
  
  # 03-Update Employees Salary
- SELECT * FROM `employees`;
+SET SQL_SAFE_UPDATES = 0;
  
  UPDATE `employees` 
  SET `salary` = `salary` + '100' 
  WHERE `job_title` = 'Manager';
+
+SELECT `salary` FROM `employees`
+ORDER BY `id` ASC;
