@@ -40,13 +40,21 @@ WHERE `salary` in (25000, 14000, 12500, 23600);
 -- WHERE `salary` = '25000' OR `salary` =  '14000' OR `salary` =  '12500' OR `salary` =  '23600';
 
 # 10-Find All Employees Without Manager
-SELECT * FROM `employees`
+SELECT `first_name`, `last_name` FROM `employees`
 WHERE `manager_id` IS NULL;
 
 # 11-Find All Employees with Salary More Than
-
+SELECT `first_name`, `last_name`, `salary` FROM `employees`
+WHERE `salary` > 50000
+ORDER BY `salary` DESC;
 
 # 12-Find 5 Best Paid Employees
+SELECT `first_name`, `last_name` 
+FROM `employees`
+ORDER BY `salary`DESC
+LIMIT 5;
+
+
 
 
 
