@@ -15,5 +15,21 @@ SET SQL_SAFE_UPDATES = 1;
  SET `salary` = `salary` + '100' 
  WHERE `job_title` = 'Manager';
 
-SELECT `salary` FROM `employees`
-ORDER BY `id` ASC;
+USE `hotel`;
+# 04-Top Paid Employee
+SELECT * FROM `employees`
+ORDER BY `salary` DESC
+LIMIT 1;
+
+# 05-Select Employees by Multiple Filters
+SELECT * FROM `employees`
+WHERE `department_id` = 4 AND `salary` >= 1000
+ORDER BY `id`;
+ 
+# 06-Delete from Table
+DELETE FROM `employees`
+WHERE `department_id` IN (1, 2);
+SELECT * FROM `employees`;
+
+
+
